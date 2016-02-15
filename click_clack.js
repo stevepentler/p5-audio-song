@@ -1,4 +1,4 @@
-var song, amplitude, width, height, value;
+var song, amplitude, width, height;
 
 function preload(){
   song = loadSound('assets/kygo_wait.mp3');
@@ -13,6 +13,8 @@ function setup() {
   amplitude = new p5.Amplitude();
 }
 
+var value = 'magenta';
+var inverseValue = 0;
 
 function draw() {
   background(0);
@@ -33,15 +35,20 @@ stroke('magenta');
   line(size2, 0 + level, size2 , height);
   line(0, size2, width, size2);
 
-  // conector
-  // line(mouseX, height/2, mouseX , height);
+// top triangle
+  triangle(4/10*width, 75, mouseX, mouseY - size, 6/10*width, 75)
+  fill(color(0, 0, 255));
+  triangle(4/10*width, 75, mouseX, mouseY - size - 20, 6/10*width, 75)
+  fill('magenta')
+  triangle(4/10*width, 75, mouseX, mouseY - size - 40, 6/10*width, 75)
+
+
   fill('white');
   triangle(0,height,mouseX,mouseY- size,width,height);
   fill(color(0, 0, 255));
   triangle(0,height,mouseX,mouseY,width,height);
-
   // triangle
-  fill('magenta');
+  fill(value);
   triangle(0,height,mouseX,mouseY+ 30,width,height);
 
 fill(255);
@@ -96,10 +103,10 @@ fill(255);
 
 function mouseClicked() {
   if (value == 0) {
-    value = 255;
+    value = 'magenta';
     inverseValue = 0;
   } else {
     value = 0;
-    inverseValue = 255;
+    inverseValue = 'magenta';
   }
 }
