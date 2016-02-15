@@ -1,4 +1,4 @@
-var song, amplitude, width, height;
+var song, amplitude, width, height, value;
 
 function preload(){
   song = loadSound('assets/get_lucky.mp3');
@@ -14,10 +14,12 @@ function setup() {
   amplitude = new p5.Amplitude();
 }
 
+var value = 0 
+
 function draw() {
   background('magenta');
   var level = amplitude.getLevel();
-  var size = map(level, 0, 1, 0, 100);
+  var size = map(level, 0, 1, 0, 1000);
   var col = map(level, 0, 1, 0, 255);
   // fill(col, col*70, col);
   // triangle(0,0,200,3*size,400,0);
@@ -59,13 +61,15 @@ function draw() {
 
   // fill(col, col*level, col);
   // triangle(0,600,width/2,12*size/2,width/2,600);
+  fill(value);
+  rect(25, 25, 50, 50);
 
 }
 
-function mousePressed() {
-  if ( sound.isPlaying() ) {
-    sound.pause();
+function mouseClicked() {
+  if (value == 0) {
+    value = 255;
   } else {
-    sound.play();
+    value = 0;
   }
 }
