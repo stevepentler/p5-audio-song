@@ -87,6 +87,10 @@ fill(255);
   ellipse(width/2, height - 120, 10, 10);
   ellipse(width/2, height - 140, 20, 20);
   ellipse(width/2, height - 140, 10, 10);
+
+
+
+  
   // triangle(size2,height,size,size,width,height);
   // rotateY(size*.01 + frameCount*.01);
   // torus(200, 60);

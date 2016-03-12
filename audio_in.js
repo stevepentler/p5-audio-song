@@ -13,7 +13,7 @@ function setup() {
 function draw() {
   background('magenta');
   var level = mic.getLevel();
-  var size = map(level, 0, 1, 0, 100);
+  var size = map(level, 0, 1, 0, 105);
   var col = map(level, 0, 1, 0, 255);
   // fill(col, col*70, col);
   // triangle(0,0,200,3*size,400,0);
@@ -40,7 +40,7 @@ function draw() {
 
   ellipse(4/5*width, 4/5*height, width/10*level, width/4*level);
 
-    ellipse(4/5*width, 4/5*height, width/2*level, width/4*level);
+  ellipse(4/5*width, 4/5*height, width/2*level, width/4*level);
 
   fill(col, col*70, col);
   ellipse(4/5*width, 4/5*height, width/6*level, width/6*level);
