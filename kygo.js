@@ -70,39 +70,28 @@ stroke(color(0, 0, 255));
 fill(0);
   ellipse(width/2, height, 50, 350);
   // white cirlces
-fill(255);
-  ellipse(width/2, height, 20, 20);
-  ellipse(width/2, height, 10, 10);
-  ellipse(width/2, height - 20, 20, 20);
-  ellipse(width/2, height - 20, 10, 10);
-  ellipse(width/2, height - 40, 20, 20);
-  ellipse(width/2, height - 40, 10, 10);
-  ellipse(width/2, height - 60, 20, 20);
-  ellipse(width/2, height - 60, 10, 10);
-  ellipse(width/2, height - 80, 20, 20);
-  ellipse(width/2, height - 80, 10, 10);
-  ellipse(width/2, height - 100, 20, 20);
-  ellipse(width/2, height - 100, 10, 10);
-  ellipse(width/2, height - 120, 20, 20);
-  ellipse(width/2, height - 120, 10, 10);
-  ellipse(width/2, height - 140, 20, 20);
-  ellipse(width/2, height - 140, 10, 10);
 
+  drawCenteredElipses(, 20, 20);
+  drawCenteredElipses(, 10, 10);
+  drawCenteredElipses( - 20, 20, 20);
+  drawCenteredElipses( - 20, 10, 10);
+  drawCenteredElipses( - 40, 20, 20);
+  drawCenteredElipses( - 40, 10, 10);
+  drawCenteredElipses( - 60, 20, 20);
+  drawCenteredElipses( - 60, 10, 10);
+  drawCenteredElipses( - 80, 20, 20);
+  drawCenteredElipses( - 80, 10, 10);
+  drawCenteredElipses( - 100, 20, 20);
+  drawCenteredElipses( - 100, 10, 10);
+  drawCenteredElipses( - 120, 20, 20);
+  drawCenteredElipses( - 120, 10, 10);
+  drawCenteredElipses( - 140, 20, 20);
+  drawCenteredElipses( - 140, 10, 10);
+}
 
-
-  
-  // triangle(size2,height,size,size,width,height);
-  // rotateY(size*.01 + frameCount*.01);
-  // torus(200, 60);
-
-
-
-
-  // beginShape();
-  // vertex(width/2, height/2);
-  // bezierVertex(size, size, 80, 75, 80, 20);
-  // bezierVertex(size, size, 60, 25, 20, 80);
-  // endShape();
+function drawCenteredElipses(ySubtraction, width, height) {
+  fill(255)
+  ellipse(width/2, y - ySubtraction, width, height);
 }
 
 function mouseClicked() {
